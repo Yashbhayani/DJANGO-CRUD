@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product details</title>
+</head>
+<body>
+<div class="content">
+    <div class="content-area">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-offset-0 col-lg-0 col-md-0 col-sm-0 col-xs-0">
+                <div class="well-box">
+                    <div class="row">
+                        <div class="col-l9-4">
+                             <div class="signup-box">
+                                 <div class="signup-header" style="background-color:blue">
+                                     <h1>Blog Applications</h1>
+                                     <b style="color:red">Select your blog</b>
+                                      </div>
+                                 <br><div class="row">
+<table class="table table-striped table-bordered table-sm">
+    <thead class="thead-dark">
+    <tr>
+         <th>Product Name</th>
+         <th>Image</th>
+         <th>Size</th>
+         <th>Color</th>
+         <th>Descriptions</th>
+
+    </tr>
+    </thead>
+<tbody>
+
+
+<tr>
+    <div class="col-lg-4">
+
+     <div class="form-group">
+
+    <td>{{p.pname}}</td>
+    </div>
+
+    <br><br>
+    <div>
+    <td><img src="{% static 'upload/' %}{{p.pimage}}" height="190px" width="190px" margin="10px"></td>
+    </div>
+    <div>
+    <td>{{p.psize}}</td>
+    </div>
+    <div>
+    <td>{{p.pcolor}}</td>
+    </div>
+    <div>
+    <td>{{p.pdetail}}</td>
+    </div>
+    </div>
+
+
+</tr>
+
+</tbody>
+</table>
+                             </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

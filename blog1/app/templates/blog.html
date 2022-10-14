@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>product blog</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="content-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-offset-0 col-lg-0 col-md-0 col-sm-0 col-xs-0">
+              <div class="well-box">
+                <div class="row">
+                  <div class="col-l9-4">
+                    <div class="signup-box">
+                      <div class="signup-header" style="background-color: blue">
+                        <h1>Blog Applications</h1>
+                        <b style="color: red">Select your blog</b>
+                      </div>
+                      <br />
+                      <div class="row">
+                        {% for val in p %}
+                        <div class="col-lg-4">
+                          <div class="form-group">
+                            <h2>
+                              <a href="/blog_detail/{{val.id}}"
+                                >{{val.pname}}</a
+                              >
+                            </h2>
+                          </div>
+
+                          <br />
+                          <br />
+                          <div>
+                            <a href="/blog_detail/{{val.id}}"
+                              ><img
+                                src="../static/{{val.pimage}}"
+                                height="10%"
+                                width="10%"
+                            /></a>
+                          </div>
+                        </div>
+                        <td><a href="/edit/{{val.id}}">Edit</a></td>
+                        <td><a href="/delete/{{val.id}}">Delete</a></td>
+
+                        {% endfor %}<br />
+                      </div>
+                      <br />
+                      <th>
+                        <button type="submit" value="insert">
+                          <a href="/insert/">insert</a>
+                        </button>
+                      </th>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
